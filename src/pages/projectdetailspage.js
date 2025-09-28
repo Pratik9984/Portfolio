@@ -1,4 +1,3 @@
-import { title } from 'framer-motion/client';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -27,9 +26,9 @@ const projectData = {
     live: '#',
     tech: ['React', 'Bootstrap'],
   },
-  4:{
-    title: 'Vehicle Price Calculator'
-    ,description: 'A vehicle price calculator that estimates the market value of used cars based on various parameters using machine learning models.',
+  4: {
+    title: 'Vehicle Price Calculator',
+    description: 'A vehicle price calculator that estimates the market value of used cars based on various parameters using machine learning models.',
     image: '/assets/Vehicle.png',
     github: 'https://github.com/Pratik9984/Vehicle-Price-calculator',
     live: 'https://vehicle-price-calculator.onrender.com',
