@@ -1,0 +1,59 @@
+.hero-section {
+  position: relative;
+  background: linear-gradient(-45deg, #0d1117, #161b22, #0d1117, #21262d);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  overflow: hidden;
+  transition: background-position 0.3s ease;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Content wrapper for 3D tilt */
+.content-wrapper {
+  transition: transform 0.3s ease;
+}
+
+/* Fade and slide animation */
+.animate-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 1.2s ease-out forwards;
+}
+
+.animate-fade.delay {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll-triggered visibility */
+.content-wrapper.visible .animate-fade {
+  animation-play-state: running;
+}
+
+/* Button styles with enhanced hover */
+.pulse {
+  animation: pulseGlow 2s infinite;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pulse:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(88, 166, 255, 0.6);
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 rgba(88, 166, 255, 0.0); }
+  50% { box-shadow: 0 0 15px rgba(88, 166, 255, 0.4); }
+  100% { box-shadow: 0 0 0 rgba(88, 166, 255, 0.0); }
+}

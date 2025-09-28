@@ -1,0 +1,93 @@
+.footer {
+  background-color: #161b22;
+  border-top: 1px solid #21262d;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.footer:hover {
+  background-color: #1c2529;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(88, 166, 255, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.footer:hover::before {
+  opacity: 1;
+}
+
+/* Animation for content */
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Social Icons */
+.social-icon {
+  color: #e6edf3;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #58a6ff;
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Tooltip */
+.social-icon::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #21262d;
+  color: #e6edf3;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  margin-bottom: 8px;
+}
+
+.social-icon:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+  .footer {
+    padding: 2rem 0;
+  }
+
+  .social-icon {
+    font-size: 1.2rem;
+  }
+
+  .social-icon::after {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+}
