@@ -7,7 +7,7 @@ const projectData = {
     description: 'A modern, responsive portfolio built with React and Bootstrap. It showcases my services, projects, and contact info with premium UI/UX.',
     image: '/assets/Portfolio.png',
     github: 'https://github.com/Pratik9984/Portfolio',
-    live: 'https://portfolio-02y6.onrender.com/',
+    live: 'https://pratik-xs4j.onrender.com/',
     tech: ['React', 'Bootstrap', 'Vercel'],
   },
   2: {
@@ -112,3 +112,4 @@ function ProjectDetailsPage() {
 }
 
 export default ProjectDetailsPage;
+
